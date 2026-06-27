@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ranklo Tech Services — Social Media, GMB Optimization, SEO, WordPress Development, and PPC Advertising." />
+  <title>Services | Ranklo Tech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .service-detail { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; padding:80px 0; }
+    .service-detail:not(:last-child) { border-bottom:1px solid var(--clr-border); }
+    .service-detail.reverse .sd-visual { order:-1; }
+    .sd-visual {
+      background:var(--clr-card);
+      border:1px solid var(--clr-border);
+      border-radius:var(--radius-xl);
+      height:380px;
+      display:flex; align-items:center; justify-content:center;
+      font-size:5rem;
+      position:relative; overflow:hidden;
+    }
+    .sd-visual::after { content:''; position:absolute; inset:0; background:linear-gradient(135deg,rgba(79,142,247,0.06),rgba(124,92,252,0.06)); }
+    .sd-content .badge { margin-bottom:16px; }
+    .sd-content h2 { font-size:clamp(1.6rem,3vw,2.4rem); margin-bottom:16px; }
+    .sd-content p  { color:var(--clr-muted); margin-bottom:24px; }
+    .sd-features   { display:flex; flex-direction:column; gap:12px; margin-bottom:32px; }
+    .sd-feat { display:flex; align-items:center; gap:12px; font-size:0.9rem; }
+    .sd-feat .chk { color:var(--clr-success); font-size:1.1rem; }
+    @media(max-width:768px){
+      .service-detail { grid-template-columns:1fr; gap:40px; }
+      .service-detail.reverse .sd-visual { order:0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="../index.html" class="nav-logo">Ranklo<span>Tech</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta"><a href="contact.html" class="btn btn-primary btn-sm">Get Free Audit</a></div>
+    <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <button class="mobile-close">✕</button>
+  <a href="../index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+  <a href="pricing.html">Pricing</a><a href="team.html">Team</a><a href="contact.html">Contact</a>
+  <a href="contact.html" class="btn btn-primary">Get Free Audit</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="section-tag" style="display:inline-flex">What We Offer</div>
+    <h1>Services That <span class="text-grad">Drive Results</span></h1>
+    <p>Specialist-led digital marketing services designed to grow traffic, generate leads, and increase revenue.</p>
+  </div>
+</section>
+
+<!-- SERVICES OVERVIEW CARDS -->
+<section class="section-sm" style="background:var(--clr-surface)">
+  <div class="container">
+    <div class="services-grid">
+      <a href="#social" class="service-card" style="text-decoration:none">
+        <div class="service-icon">📱</div>
+        <h3>Social Media</h3>
+        <p>End-to-end content creation and community management across all major platforms.</p>
+      </a>
+      <a href="#gmb" class="service-card" style="text-decoration:none">
+        <div class="service-icon">📍</div>
+        <h3>GMB Optimization</h3>
+        <p>Dominate local search with a fully optimized Google Business Profile.</p>
+      </a>
+      <a href="#seo" class="service-card" style="text-decoration:none">
+        <div class="service-icon">⚡</div>
+        <h3>Website Optimization</h3>
+        <p>Technical SEO, speed fixes, and on-page optimization that moves rankings.</p>
+      </a>
+      <a href="#wordpress" class="service-card" style="text-decoration:none">
+        <div class="service-icon">🛠️</div>
+        <h3>WordPress Development</h3>
+        <p>Custom, fast, and secure WordPress websites built for conversion.</p>
+      </a>
+      <a href="#ppc" class="service-card" style="text-decoration:none">
+        <div class="service-icon">🎯</div>
+        <h3>PPC Advertising</h3>
+        <p>High-ROI Google and Meta ad campaigns managed by certified experts.</p>
+      </a>
+      <a href="contact.html" class="service-card" style="text-decoration:none">
+        <div class="service-icon">📊</div>
+        <h3>Full-Service Package</h3>
+        <p>Complete digital marketing management across all channels under one roof.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- DETAILED SERVICE SECTIONS -->
+<section class="section">
+  <div class="container">
+
+    <!-- Social Media -->
+    <div class="service-detail" id="social">
+      <div class="sd-content fade-up">
+        <div class="badge">Social Media Handling</div>
+        <h2>Turn Followers Into <span class="text-grad">Revenue</span></h2>
+        <p>We manage your entire social media presence — strategy, content creation, scheduling, engagement, and analytics — so you can focus on running your business while your brand grows online.</p>
+        <div class="sd-features">
+          <div class="sd-feat"><span class="chk">✓</span> Custom content strategy tailored to your brand voice</div>
+          <div class="sd-feat"><span class="chk">✓</span> Daily posting on Instagram, Facebook, LinkedIn, TikTok &amp; X</div>
+          <div class="sd-feat"><span class="chk">✓</span> Graphic design and video reels creation</div>
+          <div class="sd-feat"><span class="chk">✓</span> Community management and DM responses</div>
+          <div class="sd-feat"><span class="chk">✓</span> Monthly analytics and growth reporting</div>
+          <div class="sd-feat"><span class="chk">✓</span> Competitor and trend monitoring</div>
+        </div>
+        <a href="contact.html" class="btn btn-primary">Get Social Media Help →</a>
+      </div>
+      <div class="sd-visual fade-up delay-2">📱</div>
+    </div>
+
+    <!-- GMB -->
+    <div class="service-detail reverse" id="gmb">
+      <div class="sd-visual fade-up">📍</div>
+      <div class="sd-content fade-up delay-2">
+        <div class="badge">GMB Optimization</div>
+        <h2>Own Your <span class="text-grad">Local Market</span></h2>
+        <p>Google Business Profile is the #1 driver of local business discovery. We fully optimize, manage, and grow your GMB presence to ensure you rank in the local 3-pack and convert searchers into customers.</p>
+        <div class="sd-features">
+          <div class="sd-feat"><span class="chk">✓</span> Complete GMB profile setup and optimization</div>
+          <div class="sd-feat"><span class="chk">✓</span> Weekly post publishing (offers, events, updates)</div>
+          <div class="sd-feat"><span class="chk">✓</span> Review response management and reputation building</div>
+          <div class="sd-feat"><span class="chk">✓</span> Local citation building and NAP consistency</div>
+          <div class="sd-feat"><span class="chk">✓</span> Photo and Q&A optimization</div>
+          <div class="sd-feat"><span class="chk">✓</span> Monthly GMB insight reports</div>
+        </div>
+        <a href="contact.html" class="btn btn-primary">Optimize My GMB →</a>
+      </div>
+    </div>
+
+    <!-- SEO / Website Optimization -->
+    <div class="service-detail" id="seo">
+      <div class="sd-content fade-up">
+        <div class="badge">Website Optimization</div>
+        <h2>Rank Higher. <span class="text-grad">Convert Better.</span></h2>
+        <p>We deliver comprehensive website optimization covering technical SEO, Core Web Vitals, speed performance, on-page SEO, and content strategy — everything Google needs to trust and rank your site.</p>
+        <div class="sd-features">
+          <div class="sd-feat"><span class="chk">✓</span> Technical SEO audit and implementation</div>
+          <div class="sd-feat"><span class="chk">✓</span> Core Web Vitals optimization (LCP, CLS, FID)</div>
+          <div class="sd-feat"><span class="chk">✓</span> Page speed optimization (sub-2s load times)</div>
+          <div class="sd-feat"><span class="chk">✓</span> On-page SEO: meta, headings, schema markup</div>
+          <div class="sd-feat"><span class="chk">✓</span> Keyword research and content strategy</div>
+          <div class="sd-feat"><span class="chk">✓</span> Backlink profile analysis and building</div>
+        </div>
+        <a href="contact.html" class="btn btn-primary">Boost My Rankings →</a>
+      </div>
+      <div class="sd-visual fade-up delay-2">⚡</div>
+    </div>
+
+    <!-- WordPress -->
+    <div class="service-detail reverse" id="wordpress">
+      <div class="sd-visual fade-up">🛠️</div>
+      <div class="sd-content fade-up delay-2">
+        <div class="badge">WordPress Development</div>
+        <h2>Websites Built to <span class="text-grad">Perform</span></h2>
+        <p>We design and develop custom WordPress websites that are fast, secure, SEO-optimized, and built to convert. From business brochure sites to complex WooCommerce stores, we build it right the first time.</p>
+        <div class="sd-features">
+          <div class="sd-feat"><span class="chk">✓</span> Custom WordPress theme design and development</div>
+          <div class="sd-feat"><span class="chk">✓</span> WooCommerce e-commerce stores</div>
+          <div class="sd-feat"><span class="chk">✓</span> Mobile-first, responsive design</div>
+          <div class="sd-feat"><span class="chk">✓</span> Page speed and performance optimization</div>
+          <div class="sd-feat"><span class="chk">✓</span> Security hardening and SSL setup</div>
+          <div class="sd-feat"><span class="chk">✓</span> Ongoing maintenance and support available</div>
+        </div>
+        <a href="contact.html" class="btn btn-primary">Start My Website Project →</a>
+      </div>
+    </div>
+
+    <!-- PPC -->
+    <div class="service-detail" id="ppc">
+      <div class="sd-content fade-up">
+        <div class="badge">PPC Advertising</div>
+        <h2>Turn Ad Spend Into <span class="text-grad">Predictable Revenue</span></h2>
+        <p>Our certified PPC specialists build and manage Google Ads and Meta Ads campaigns engineered for maximum return on ad spend. We handle everything — from keyword bidding to creative testing to landing page optimization.</p>
+        <div class="sd-features">
+          <div class="sd-feat"><span class="chk">✓</span> Google Search, Display &amp; Shopping Ads</div>
+          <div class="sd-feat"><span class="chk">✓</span> Meta (Facebook &amp; Instagram) Ads management</div>
+          <div class="sd-feat"><span class="chk">✓</span> Audience targeting and retargeting campaigns</div>
+          <div class="sd-feat"><span class="chk">✓</span> A/B testing of ad creatives and copy</div>
+          <div class="sd-feat"><span class="chk">✓</span> Conversion tracking and attribution setup</div>
+          <div class="sd-feat"><span class="chk">✓</span> Weekly performance optimization and reporting</div>
+        </div>
+        <a href="contact.html" class="btn btn-primary">Launch My PPC Campaign →</a>
+      </div>
+      <div class="sd-visual fade-up delay-2">🎯</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section" style="background:var(--clr-surface)">
+  <div class="container">
+    <div class="cta-banner fade-up">
+      <h2>Not Sure Which Service <span class="text-grad">You Need?</span></h2>
+      <p>Book a free consultation and we'll audit your current digital presence and recommend the highest-impact services for your business goals.</p>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-primary btn-lg">Get Free Consultation →</a>
+        <a href="pricing.html" class="btn btn-outline btn-lg">View Pricing Plans</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo">Ranklo<span>Tech</span></a>
+        <p>Results-driven digital marketing for businesses serious about growth.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="Twitter">𝕏</a>
+          <a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram">ig</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Services</h4><ul>
+        <li><a href="#social">Social Media</a></li><li><a href="#gmb">GMB Optimization</a></li>
+        <li><a href="#seo">Website SEO</a></li><li><a href="#wordpress">WordPress Dev</a></li>
+        <li><a href="#ppc">PPC Advertising</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Company</h4><ul>
+        <li><a href="about.html">About Us</a></li><li><a href="team.html">Our Team</a></li>
+        <li><a href="pricing.html">Pricing</a></li><li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul>
+        <li><a href="mailto:hello@ranklotech.com">hello@ranklotech.com</a></li>
+        <li><a href="tel:+18007265560">+1 800 RANKLO</a></li>
+        <li><a href="#">123 Digital Ave, NY</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Ranklo Tech. All rights reserved.</p>
+      <div class="footer-bottom-links"><a href="privacy.html">Privacy Policy</a><a href="#">Terms</a></div>
+    </div>
+  </div>
+</footer>
+<script src="../script.js"></script>
+</body>
+</html>

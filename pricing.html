@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ranklo Tech Pricing — Transparent, no-contract pricing plans for businesses of every size." />
+  <title>Pricing | Ranklo Tech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .compare-table { width:100%; border-collapse:collapse; margin-top:64px; }
+    .compare-table th, .compare-table td { padding:16px 20px; text-align:left; border-bottom:1px solid var(--clr-border); font-size:0.9rem; }
+    .compare-table thead th { background:var(--clr-card); font-family:var(--font-display); font-size:0.85rem; color:var(--clr-muted); text-transform:uppercase; letter-spacing:0.06em; }
+    .compare-table thead th:first-child { border-radius:var(--radius-md) 0 0 0; }
+    .compare-table thead th:last-child  { border-radius:0 var(--radius-md) 0 0; }
+    .compare-table th.popular-col { color:var(--clr-accent); }
+    .compare-table td:not(:first-child) { text-align:center; color:var(--clr-white); font-weight:600; }
+    .compare-table td:first-child { color:var(--clr-muted); }
+    .compare-table tr:hover td { background:rgba(79,142,247,0.04); }
+    .chk-green { color:var(--clr-success); }
+    .chk-red   { color:#555; }
+    @media(max-width:640px){ .compare-table { font-size:0.8rem; } .compare-table th,.compare-table td{padding:12px 10px;} }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="../index.html" class="nav-logo">Ranklo<span>Tech</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="pricing.html" class="active">Pricing</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta"><a href="contact.html" class="btn btn-primary btn-sm">Get Free Audit</a></div>
+    <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <button class="mobile-close">✕</button>
+  <a href="../index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+  <a href="pricing.html">Pricing</a><a href="team.html">Team</a><a href="contact.html">Contact</a>
+  <a href="contact.html" class="btn btn-primary">Get Free Audit</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="section-tag" style="display:inline-flex">No Hidden Fees</div>
+    <h1>Pricing That <span class="text-grad">Makes Sense</span></h1>
+    <p>Simple, transparent plans built around your growth stage. Cancel anytime — no contracts, no surprises.</p>
+  </div>
+</section>
+
+<!-- PRICING CARDS -->
+<section class="section">
+  <div class="container">
+    <div class="pricing-grid">
+      <!-- Starter -->
+      <div class="pricing-card fade-up">
+        <div class="plan-name">Starter</div>
+        <div class="plan-price"><sup>$</sup>299</div>
+        <div class="plan-period">per month · billed monthly</div>
+        <p style="font-size:0.88rem;color:var(--clr-muted)">Perfect for local businesses just starting their digital marketing journey.</p>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li><span class="chk">✓</span> Basic social media management (2 platforms)</li>
+          <li><span class="chk">✓</span> 5 GMB posts per month</li>
+          <li><span class="chk">✓</span> Basic SEO audit (one-time)</li>
+          <li><span class="chk">✓</span> Monthly performance report</li>
+          <li><span class="chk">✓</span> Email support (48-hr response)</li>
+          <li><span class="x">✗</span> PPC campaign management</li>
+          <li><span class="x">✗</span> Website optimization</li>
+          <li><span class="x">✗</span> Dedicated account manager</li>
+        </ul>
+        <a href="contact.html" class="btn btn-outline">Get Started with Starter</a>
+      </div>
+
+      <!-- Growth (Popular) -->
+      <div class="pricing-card popular fade-up delay-1">
+        <div class="popular-badge">⭐ Most Popular</div>
+        <div class="plan-name">Growth</div>
+        <div class="plan-price"><sup>$</sup>699</div>
+        <div class="plan-period">per month · billed monthly</div>
+        <p style="font-size:0.88rem;color:var(--clr-muted)">For businesses ready to scale — covers all core digital marketing channels.</p>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li><span class="chk">✓</span> Full social media management (4 platforms)</li>
+          <li><span class="chk">✓</span> Advanced GMB optimization + 12 monthly posts</li>
+          <li><span class="chk">✓</span> Full website optimization (SEO + Speed)</li>
+          <li><span class="chk">✓</span> PPC campaign setup &amp; management</li>
+          <li><span class="chk">✓</span> Bi-weekly performance reporting</li>
+          <li><span class="chk">✓</span> Priority email &amp; phone support</li>
+          <li><span class="chk">✓</span> Conversion rate optimization</li>
+          <li><span class="x">✗</span> Dedicated account manager</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Get Started with Growth →</a>
+      </div>
+
+      <!-- Premium -->
+      <div class="pricing-card fade-up delay-2">
+        <div class="plan-name">Premium</div>
+        <div class="plan-price"><sup>$</sup>1,499</div>
+        <div class="plan-period">per month · billed monthly</div>
+        <p style="font-size:0.88rem;color:var(--clr-muted)">Complete digital marketing management for serious brands and enterprises.</p>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li><span class="chk">✓</span> Complete digital marketing suite (all channels)</li>
+          <li><span class="chk">✓</span> Advanced SEO + content strategy</li>
+          <li><span class="chk">✓</span> Full PPC management (Google + Meta Ads)</li>
+          <li><span class="chk">✓</span> Dedicated account manager (named contact)</li>
+          <li><span class="chk">✓</span> Weekly executive reporting</li>
+          <li><span class="chk">✓</span> Priority support (24-hr response, phone)</li>
+          <li><span class="chk">✓</span> Quarterly strategy &amp; growth sessions</li>
+          <li><span class="chk">✓</span> Custom landing page design &amp; testing</li>
+        </ul>
+        <a href="contact.html" class="btn btn-outline">Get Started with Premium</a>
+      </div>
+    </div>
+
+    <!-- Comparison Table -->
+    <div class="fade-up">
+      <h3 class="text-center" style="margin-top:80px;margin-bottom:8px">Full Feature <span class="text-grad">Comparison</span></h3>
+      <p class="text-center" style="color:var(--clr-muted);margin-bottom:0">See exactly what's included in each plan.</p>
+
+      <table class="compare-table" role="table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Starter<br/><span style="color:var(--clr-accent)">$299/mo</span></th>
+            <th class="popular-col">Growth ⭐<br/><span>$699/mo</span></th>
+            <th>Premium<br/><span style="color:var(--clr-accent)">$1,499/mo</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Social Media Platforms</td><td>2</td><td>4</td><td>All</td></tr>
+          <tr><td>GMB Monthly Posts</td><td>5</td><td>12</td><td>Unlimited</td></tr>
+          <tr><td>SEO Audit</td><td>Basic (1x)</td><td>Full (Ongoing)</td><td>Advanced (Ongoing)</td></tr>
+          <tr><td>Website Speed Optimization</td><td class="chk-red">✗</td><td class="chk-green">✓</td><td class="chk-green">✓</td></tr>
+          <tr><td>PPC Campaign Management</td><td class="chk-red">✗</td><td class="chk-green">✓</td><td class="chk-green">✓ (Google + Meta)</td></tr>
+          <tr><td>Content Strategy</td><td class="chk-red">✗</td><td class="chk-green">✓</td><td class="chk-green">✓ Advanced</td></tr>
+          <tr><td>Conversion Rate Optimization</td><td class="chk-red">✗</td><td class="chk-green">✓</td><td class="chk-green">✓</td></tr>
+          <tr><td>Dedicated Account Manager</td><td class="chk-red">✗</td><td class="chk-red">✗</td><td class="chk-green">✓</td></tr>
+          <tr><td>Reporting Frequency</td><td>Monthly</td><td>Bi-weekly</td><td>Weekly</td></tr>
+          <tr><td>Support Response Time</td><td>48 hours</td><td>24 hours</td><td>Same day</td></tr>
+          <tr><td>Quarterly Strategy Session</td><td class="chk-red">✗</td><td class="chk-red">✗</td><td class="chk-green">✓</td></tr>
+          <tr><td>Custom Landing Pages</td><td class="chk-red">✗</td><td class="chk-red">✗</td><td class="chk-green">✓</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ on Pricing -->
+<section class="section" style="background:var(--clr-surface)">
+  <div class="container">
+    <div class="section-head center">
+      <div class="section-tag">Pricing FAQ</div>
+      <h2 class="section-title">Questions About <span class="text-grad">Pricing</span></h2>
+    </div>
+    <div class="faq-wrap">
+      <div class="faq-item">
+        <button class="faq-q">Are there any setup fees or hidden costs? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">No setup fees, no hidden costs. The price you see is the price you pay. Ad spend for PPC campaigns is separate and goes directly to Google/Meta — we never mark up ad spend.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can I switch plans as my business grows? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Absolutely. You can upgrade or downgrade your plan at any time. Changes take effect at the start of your next billing cycle. Most clients start on Growth and upgrade to Premium as they scale.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What if I only need one specific service? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">We offer custom engagements for clients who only need a specific service. Contact us and we'll put together a custom quote based on your exact needs.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Is there a free trial available? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">We don't offer a free trial, but we do provide a comprehensive free audit of your current digital presence. This gives you a real sense of the depth of our analysis and the value we bring before you commit to anything.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <div class="cta-banner fade-up">
+      <h2>Not Sure Which Plan Is <span class="text-grad">Right for You?</span></h2>
+      <p>Talk to our team and we'll match you to the right plan based on your business goals and current situation — at zero cost.</p>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-primary btn-lg">Book Free Consultation →</a>
+        <a href="services.html" class="btn btn-outline btn-lg">Explore Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo">Ranklo<span>Tech</span></a>
+        <p>Results-driven digital marketing for businesses serious about growth.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="Twitter">𝕏</a>
+          <a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram">ig</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Services</h4><ul>
+        <li><a href="services.html#social">Social Media</a></li><li><a href="services.html#gmb">GMB</a></li>
+        <li><a href="services.html#seo">SEO</a></li><li><a href="services.html#wordpress">WordPress</a></li>
+        <li><a href="services.html#ppc">PPC</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Company</h4><ul>
+        <li><a href="about.html">About Us</a></li><li><a href="team.html">Team</a></li>
+        <li><a href="pricing.html">Pricing</a></li><li><a href="contact.html">Contact</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul>
+        <li><a href="mailto:hello@ranklotech.com">hello@ranklotech.com</a></li>
+        <li><a href="tel:+18007265560">+1 800 RANKLO</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Ranklo Tech. All rights reserved.</p>
+      <div class="footer-bottom-links"><a href="privacy.html">Privacy Policy</a><a href="#">Terms</a></div>
+    </div>
+  </div>
+</footer>
+<script src="../script.js"></script>
+</body>
+</html>
