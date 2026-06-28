@@ -103,7 +103,7 @@
 <!-- ===== NAVBAR ===== -->
 <nav class="navbar" role="navigation" aria-label="Main Navigation">
   <div class="container nav-inner">
-    <a href="../index.html" class="nav-logo">Ranklo<span>Tech</span></a>
+    <a href="index.html" class="nav-logo">Ranklo<span>Tech</span></a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -261,7 +261,7 @@
             <input type="hidden" name="_captcha"  value="false" />
             <input type="hidden" name="_template" value="table" />
             <!-- After submit, show our thank-you page (same page with ?sent=1) -->
-            <input type="hidden" name="_next"     value="contact.html?sent=1" />
+            <input type="hidden" name="_next" value="https://zohaibali1304.github.io/ranklo-website/contact.html?sent=1" />
             <!-- Honeypot spam trap -->
             <input type="text"   name="_honey"    style="display:none" />
 
@@ -549,8 +549,7 @@
     }
 
     /* Show loading state */
-    submitBtn.classList.add('loading');
-    submitBtn.textContent = '';
+    submitBtn.innerText = 'Sending...';
     // Form will now submit natively to FormSubmit and redirect back
   });
 </script>
