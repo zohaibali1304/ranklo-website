@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Ranklo Tech — Get your free digital marketing audit or reach us directly by email, phone, or our contact form." />
+  <title>Contact Us | Ranklo Tech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    /* ---- Thank You overlay ---- */
+    .thankyou-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(10,13,20,0.85);
+      backdrop-filter: blur(8px);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+    }
+    .thankyou-overlay.show { display: flex; }
+    .thankyou-box {
+      background: var(--clr-card);
+      border: 1px solid rgba(79,142,247,0.4);
+      border-radius: var(--radius-xl);
+      padding: 56px 48px;
+      text-align: center;
+      max-width: 480px;
+      width: 90%;
+      box-shadow: 0 0 60px rgba(79,142,247,0.2);
+      animation: pop-in 0.4s cubic-bezier(0.34,1.56,0.64,1) forwards;
+    }
+    @keyframes pop-in {
+      from { transform: scale(0.85); opacity: 0; }
+      to   { transform: scale(1);    opacity: 1; }
+    }
+    .ty-icon  { font-size: 3.5rem; margin-bottom: 20px; }
+    .ty-title { font-size: 1.8rem; font-weight: 800; margin-bottom: 12px; color: var(--clr-white); }
+    .ty-text  { color: var(--clr-muted); margin-bottom: 32px; line-height: 1.7; }
+    .ty-email { color: var(--clr-accent); font-weight: 600; }
+
+    /* ---- Map Embed placeholder ---- */
+    .map-wrap {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--clr-border);
+      margin-top: 32px;
+      height: 220px;
+      background: var(--clr-card);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+      color: var(--clr-muted);
+      font-size: 0.88rem;
+    }
+    .map-wrap .map-emoji { font-size: 2rem; }
+
+    /* ---- Info card ---- */
+    .info-card {
+      background: var(--clr-card);
+      border: 1px solid var(--clr-border);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+    }
+    .info-card h3 { font-size: 1.2rem; margin-bottom: 8px; }
+    .info-card p  { font-size: 0.88rem; color: var(--clr-muted); margin-bottom: 28px; }
+
+    /* Submit button loader */
+    .btn-submit { position: relative; overflow: hidden; width: 100%; justify-content: center; }
+    .btn-submit.loading { pointer-events: none; opacity: 0.8; }
+    .btn-submit.loading::after {
+      content: '';
+      position: absolute;
+      width: 18px; height: 18px;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* Required asterisk */
+    .req { color: #FC5C7C; margin-left: 2px; }
+
+    /* Error state */
+    .form-group input.error,
+    .form-group select.error,
+    .form-group textarea.error {
+      border-color: #FC5C7C;
+      box-shadow: 0 0 0 3px rgba(252,92,124,0.1);
+    }
+    .err-msg { font-size: 0.78rem; color: #FC5C7C; margin-top: 4px; display: none; }
+    .form-group.has-error .err-msg { display: block; }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" role="navigation" aria-label="Main Navigation">
+  <div class="container nav-inner">
+    <a href="../index.html" class="nav-logo">Ranklo<span>Tech</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-primary btn-sm">Get Free Audit</a>
+    </div>
+    <button class="hamburger" aria-label="Open mobile menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" role="dialog" aria-modal="true">
+  <button class="mobile-close" aria-label="Close menu">✕</button>
+  <a href="../index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="team.html">Team</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="btn btn-primary">Get Free Audit</a>
+</div>
+
+<!-- ===== PAGE HERO ===== -->
+<section class="page-hero">
+  <div class="container">
+    <div class="section-tag" style="display:inline-flex">Get In Touch</div>
+    <h1>Let's Grow Your <span class="text-grad">Business Together</span></h1>
+    <p>Send us a message, book a free audit, or just say hello — we respond to every inquiry within 24 hours.</p>
+  </div>
+</section>
+
+<!-- ===== MAIN CONTACT SECTION ===== -->
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- LEFT: Contact Info -->
+      <div>
+        <div class="info-card">
+          <h3>Contact Information</h3>
+          <p>Reach us through any channel below or fill the form and we'll get back to you within 24 hours.</p>
+
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="c-icon">📧</div>
+              <div>
+                <div class="c-label">Email Address</div>
+                <div class="c-val">
+                  <a href="mailto:syedzohaib1304@gmail.com" style="color:var(--clr-accent)">
+                    syedzohaib1304@gmail.com
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="c-icon">📞</div>
+              <div>
+                <div class="c-label">Phone Number</div>
+                <div class="c-val">
+                  <a href="tel:+18007265560" style="color:inherit">+1 800 RANKLO (726-556)</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="c-icon">📍</div>
+              <div>
+                <div class="c-label">Office Address</div>
+                <div class="c-val">123 Digital Avenue, Suite 500<br />New York, NY 10001, USA</div>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="c-icon">🕐</div>
+              <div>
+                <div class="c-label">Business Hours</div>
+                <div class="c-val">Mon – Fri: 9:00 AM – 6:00 PM EST<br />Sat: 10:00 AM – 2:00 PM EST</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Links -->
+          <div style="margin-top:28px;padding-top:24px;border-top:1px solid var(--clr-border)">
+            <div class="c-label" style="margin-bottom:14px">Follow Us</div>
+            <div style="display:flex;gap:12px">
+              <a href="#" aria-label="LinkedIn" style="
+                width:40px;height:40px;border-radius:50%;border:1px solid var(--clr-border);
+                display:flex;align-items:center;justify-content:center;color:var(--clr-muted);
+                transition:var(--transition);font-size:0.9rem;text-decoration:none"
+                onmouseover="this.style.borderColor='var(--clr-accent)';this.style.color='var(--clr-accent)'"
+                onmouseout="this.style.borderColor='var(--clr-border)';this.style.color='var(--clr-muted)'">in</a>
+              <a href="#" aria-label="Twitter/X" style="
+                width:40px;height:40px;border-radius:50%;border:1px solid var(--clr-border);
+                display:flex;align-items:center;justify-content:center;color:var(--clr-muted);
+                transition:var(--transition);font-size:0.9rem;text-decoration:none"
+                onmouseover="this.style.borderColor='var(--clr-accent)';this.style.color='var(--clr-accent)'"
+                onmouseout="this.style.borderColor='var(--clr-border)';this.style.color='var(--clr-muted)'">𝕏</a>
+              <a href="#" aria-label="Instagram" style="
+                width:40px;height:40px;border-radius:50%;border:1px solid var(--clr-border);
+                display:flex;align-items:center;justify-content:center;color:var(--clr-muted);
+                transition:var(--transition);font-size:0.9rem;text-decoration:none"
+                onmouseover="this.style.borderColor='var(--clr-accent)';this.style.color='var(--clr-accent)'"
+                onmouseout="this.style.borderColor='var(--clr-border)';this.style.color='var(--clr-muted)'">ig</a>
+              <a href="#" aria-label="Facebook" style="
+                width:40px;height:40px;border-radius:50%;border:1px solid var(--clr-border);
+                display:flex;align-items:center;justify-content:center;color:var(--clr-muted);
+                transition:var(--transition);font-size:0.9rem;text-decoration:none"
+                onmouseover="this.style.borderColor='var(--clr-accent)';this.style.color='var(--clr-accent)'"
+                onmouseout="this.style.borderColor='var(--clr-border)';this.style.color='var(--clr-muted)'">f</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map Placeholder -->
+        <div class="map-wrap">
+          <div class="map-emoji">🗺️</div>
+          <span>123 Digital Avenue, Suite 500, New York, NY 10001</span>
+          <a href="https://maps.google.com/?q=123+Digital+Avenue+New+York+NY" target="_blank" rel="noopener"
+             style="color:var(--clr-accent);font-size:0.82rem;text-decoration:none">
+            Open in Google Maps →
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT: Contact Form -->
+      <div>
+        <div class="contact-form" id="formWrapper">
+          <h3 style="margin-bottom:6px">Send Us a Message</h3>
+          <p style="color:var(--clr-muted);font-size:0.88rem;margin-bottom:28px">
+            Fill out the form below and we'll reply within 24 hours.
+            Your message goes directly to <span class="ty-email">syedzohaib1304@gmail.com</span>
+          </p>
+
+          <!--
+            FormSubmit.co — free, no backend needed.
+            First submission: FormSubmit sends a confirmation email to activate.
+            After that, every submission lands in syedzohaib1304@gmail.com.
+          -->
+          <form
+            id="contactForm"
+            action="https://formsubmit.co/syedzohaib1304@gmail.com"
+            method="POST"
+            novalidate
+          >
+            <!-- FormSubmit config fields -->
+            <input type="hidden" name="_subject"  value="🚀 New Lead from Ranklo Tech Website" />
+            <input type="hidden" name="_captcha"  value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <!-- After submit, show our thank-you page (same page with ?sent=1) -->
+            <input type="hidden" name="_next"     value="contact.html?sent=1" />
+            <!-- Honeypot spam trap -->
+            <input type="text"   name="_honey"    style="display:none" />
+
+            <!-- Row 1: Name + Email -->
+            <div class="form-row">
+              <div class="form-group" id="grp-name">
+                <label for="name">Full Name <span class="req">*</span></label>
+                <input type="text" id="name" name="name"
+                       placeholder="John Smith" autocomplete="name" />
+                <span class="err-msg">Please enter your full name.</span>
+              </div>
+              <div class="form-group" id="grp-email">
+                <label for="email">Email Address <span class="req">*</span></label>
+                <input type="email" id="email" name="email"
+                       placeholder="john@company.com" autocomplete="email" />
+                <span class="err-msg">Please enter a valid email address.</span>
+              </div>
+            </div>
+
+            <!-- Row 2: Phone + Service -->
+            <div class="form-row">
+              <div class="form-group" id="grp-phone">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone"
+                       placeholder="+1 (555) 000-0000" autocomplete="tel" />
+              </div>
+              <div class="form-group" id="grp-service">
+                <label for="service">Service Interested In <span class="req">*</span></label>
+                <select id="service" name="service">
+                  <option value="">Select a service...</option>
+                  <option value="Social Media Management">Social Media Management</option>
+                  <option value="GMB Optimization">GMB Optimization</option>
+                  <option value="Website Optimization / SEO">Website Optimization / SEO</option>
+                  <option value="WordPress Development">WordPress Development</option>
+                  <option value="PPC Advertising (Google / Meta)">PPC Advertising (Google / Meta)</option>
+                  <option value="Full-Service Package">Full-Service Package</option>
+                  <option value="Not Sure / Need Consultation">Not Sure / Need Consultation</option>
+                </select>
+                <span class="err-msg">Please select a service.</span>
+              </div>
+            </div>
+
+            <!-- Business Name -->
+            <div class="form-group">
+              <label for="business">Business / Company Name</label>
+              <input type="text" id="business" name="business"
+                     placeholder="Your Company Ltd." />
+            </div>
+
+            <!-- Budget -->
+            <div class="form-group">
+              <label for="budget">Monthly Budget Range</label>
+              <select id="budget" name="budget">
+                <option value="">Select budget range...</option>
+                <option value="Under $500/mo">Under $500/mo</option>
+                <option value="$500 – $1,000/mo">$500 – $1,000/mo</option>
+                <option value="$1,000 – $2,500/mo">$1,000 – $2,500/mo</option>
+                <option value="$2,500 – $5,000/mo">$2,500 – $5,000/mo</option>
+                <option value="$5,000+/mo">$5,000+/mo</option>
+              </select>
+            </div>
+
+            <!-- Message -->
+            <div class="form-group" id="grp-message">
+              <label for="message">Tell Us About Your Project <span class="req">*</span></label>
+              <textarea id="message" name="message" rows="5"
+                placeholder="Briefly describe your business, current challenges, and what you're hoping to achieve..."></textarea>
+              <span class="err-msg">Please describe your project (at least 20 characters).</span>
+            </div>
+
+            <!-- How did you find us -->
+            <div class="form-group">
+              <label for="source">How Did You Find Us?</label>
+              <select id="source" name="source">
+                <option value="">Select...</option>
+                <option value="Google Search">Google Search</option>
+                <option value="Social Media">Social Media</option>
+                <option value="Referral / Word of Mouth">Referral / Word of Mouth</option>
+                <option value="Online Ad">Online Ad</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg btn-submit" id="submitBtn">
+              Send Message →
+            </button>
+
+            <p style="font-size:0.78rem;color:var(--clr-muted);margin-top:14px;text-align:center">
+              🔒 Your information is private and will never be shared with third parties.
+            </p>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== QUICK CONTACT CARDS ===== -->
+<section class="section-sm" style="background:var(--clr-surface)">
+  <div class="container">
+    <div class="services-grid" style="grid-template-columns:repeat(3,1fr)">
+      <div class="service-card" style="text-align:center">
+        <div class="service-icon" style="margin-inline:auto">💬</div>
+        <h3>Quick Chat</h3>
+        <p>Need a fast answer? Send us a direct message on WhatsApp or Messenger — we reply within 2 hours during business hours.</p>
+        <a href="#" class="service-link" style="justify-content:center">Message Us →</a>
+      </div>
+      <div class="service-card" style="text-align:center">
+        <div class="service-icon" style="margin-inline:auto">📅</div>
+        <h3>Book a Call</h3>
+        <p>Prefer to talk directly? Book a free 30-minute strategy call with one of our specialists at a time that suits you.</p>
+        <a href="#" class="service-link" style="justify-content:center">Schedule a Call →</a>
+      </div>
+      <div class="service-card" style="text-align:center">
+        <div class="service-icon" style="margin-inline:auto">🔍</div>
+        <h3>Free Audit</h3>
+        <p>Get a comprehensive audit of your website SEO, GMB profile, and social media — completely free, no strings attached.</p>
+        <a href="#contactForm" class="service-link" style="justify-content:center">Get Free Audit →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo">Ranklo<span>Tech</span></a>
+        <p>Results-driven digital marketing for businesses serious about growth.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">ig</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#social">Social Media</a></li>
+          <li><a href="services.html#gmb">GMB Optimization</a></li>
+          <li><a href="services.html#seo">Website SEO</a></li>
+          <li><a href="services.html#wordpress">WordPress Dev</a></li>
+          <li><a href="services.html#ppc">PPC Advertising</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:syedzohaib1304@gmail.com">syedzohaib1304@gmail.com</a></li>
+          <li><a href="tel:+18007265560">+1 800 RANKLO</a></li>
+          <li><a href="#">123 Digital Ave, Suite 500, NY</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Ranklo Tech. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== THANK YOU OVERLAY ===== -->
+<div class="thankyou-overlay" id="thankYouOverlay" role="dialog" aria-modal="true" aria-label="Message sent confirmation">
+  <div class="thankyou-box">
+    <div class="ty-icon">🎉</div>
+    <div class="ty-title">Message Sent!</div>
+    <p class="ty-text">
+      Thank you for reaching out. Your message has been sent to
+      <span class="ty-email">syedzohaib1304@gmail.com</span>.<br /><br />
+      We'll review your inquiry and get back to you within <strong style="color:var(--clr-white)">24 hours</strong>.
+    </p>
+    <button class="btn btn-primary" onclick="closeOverlay()" style="width:100%;justify-content:center">
+      Back to Homepage
+    </button>
+  </div>
+</div>
+
+<script src="../script.js"></script>
+<script>
+  /* -----------------------------------------------
+     CLIENT-SIDE VALIDATION
+     FormSubmit handles actual email delivery.
+     This JS validates before allowing form submit.
+  ----------------------------------------------- */
+
+  const form      = document.getElementById('contactForm');
+  const submitBtn = document.getElementById('submitBtn');
+
+  /* Show thank-you overlay if redirected back with ?sent=1 */
+  (function () {
+    if (window.location.search.includes('sent=1')) {
+      document.getElementById('thankYouOverlay').classList.add('show');
+      // Clean URL
+      window.history.replaceState({}, '', window.location.pathname);
+    }
+  })();
+
+  function closeOverlay() {
+    document.getElementById('thankYouOverlay').classList.remove('show');
+    window.location.href = '../index.html';
+  }
+
+  /* Click outside overlay to close */
+  document.getElementById('thankYouOverlay').addEventListener('click', function (e) {
+    if (e.target === this) closeOverlay();
+  });
+
+  /* ---------- Validation helpers ---------- */
+  function setError(groupId, inputEl) {
+    const grp = document.getElementById(groupId);
+    grp.classList.add('has-error');
+    inputEl.classList.add('error');
+  }
+
+  function clearError(groupId, inputEl) {
+    const grp = document.getElementById(groupId);
+    if (grp) grp.classList.remove('has-error');
+    if (inputEl) inputEl.classList.remove('error');
+  }
+
+  /* Clear errors on input */
+  ['name','email','service','message'].forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.addEventListener('input', () => clearError('grp-' + id, el));
+    el.addEventListener('change', () => clearError('grp-' + id, el));
+  });
+
+  /* ---------- Form submit ---------- */
+  form.addEventListener('submit', function (e) {
+    let valid = true;
+
+    // Name
+    const nameEl = document.getElementById('name');
+    if (!nameEl.value.trim() || nameEl.value.trim().length < 2) {
+      setError('grp-name', nameEl);
+      valid = false;
+    } else { clearError('grp-name', nameEl); }
+
+    // Email
+    const emailEl = document.getElementById('email');
+    const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRe.test(emailEl.value.trim())) {
+      setError('grp-email', emailEl);
+      valid = false;
+    } else { clearError('grp-email', emailEl); }
+
+    // Service
+    const serviceEl = document.getElementById('service');
+    if (!serviceEl.value) {
+      setError('grp-service', serviceEl);
+      valid = false;
+    } else { clearError('grp-service', serviceEl); }
+
+    // Message
+    const msgEl = document.getElementById('message');
+    if (!msgEl.value.trim() || msgEl.value.trim().length < 20) {
+      setError('grp-message', msgEl);
+      valid = false;
+    } else { clearError('grp-message', msgEl); }
+
+    if (!valid) {
+      e.preventDefault();
+      // Scroll to first error
+      const firstError = form.querySelector('.has-error');
+      if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+
+    /* Show loading state */
+    submitBtn.classList.add('loading');
+    submitBtn.textContent = '';
+    // Form will now submit natively to FormSubmit and redirect back
+  });
+</script>
+</body>
+</html>
